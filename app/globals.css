@@ -3,6 +3,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --primary-blue: #1e3a8a;
+  --primary-yellow: #fbbf24;
+  --accent-orange: #f97316;
+  --text-dark: #1f2937;
+  --text-light: #6b7280;
 }
 
 @theme inline {
@@ -12,15 +17,104 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Custom styles for CS Painting Gambia */
+.hero-section {
+  background: linear-gradient(135deg, #fef7e0 0%, #fff9e6 50%, #fffbf0 100%);
+}
+
+.btn-primary {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 25px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-dark);
+  padding: 12px 28px;
+  border-radius: 25px;
+  border: 1px solid #e5e7eb;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.nav-link {
+  color: var(--text-dark);
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+  color: var(--primary-blue);
+}
+
+.section-title {
+  color: var(--primary-blue);
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1.2;
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.service-card:hover {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.arrow-btn {
+  width: 48px;
+  height: 48px;
+  background: var(--primary-blue);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.arrow-btn:hover {
+  background: #1e40af;
+  transform: scale(1.1);
+}
+
+.about-section {
+  background-color: var(--primary-blue);
+  color: white;
+}
+
+.paint-splash {
+  position: relative;
+}
+
+.yellow-splash {
+  background-color: var(--primary-yellow);
 }
