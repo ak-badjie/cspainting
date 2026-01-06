@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { User, Loader2 } from "lucide-react";
 import { getProducts, type Product } from "@/lib/firestore";
+import MobileMenu from "@/components/MobileMenu";
 
 export default function Home() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -195,6 +196,9 @@ export default function Home() {
               <User className="w-5 h-5 text-gray-600" />
             </Link>
           </div>
+
+          {/* Mobile Menu */}
+          <MobileMenu />
         </div>
       </header>
 
